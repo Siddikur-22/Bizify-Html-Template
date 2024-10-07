@@ -214,6 +214,9 @@ ul {
 .pb-80 {
   padding-bottom: 80px;
 }
+.pb-190 {
+  padding-bottom: 190px;
+}
 
 .pb-30 {
   padding-bottom: 30px;
@@ -864,6 +867,10 @@ header.style-1 {
         padding: 22px 48px;
         border-radius: 6px;
         display: inline-block;
+      }
+      &:hover{
+        background-color: var(--title-color-1);
+        color: var(--white-color);
       }
   }
   .main-menu {
@@ -2014,7 +2021,7 @@ header.style-1 {
           font-weight: 500;
           font-size: 14px;
           line-height: 14px;
-          padding: 19px 45px;
+          padding: 22px 45px;
           border-radius: 6px;
           display: inline-block;
         }
@@ -2049,7 +2056,7 @@ header.style-1 {
   }
   .customer-counter {
     position: absolute;
-    top: 61%;
+    top: 72%;
     left: 53%;
     .customer-card {
       background-color: var(--white-color);
@@ -2203,6 +2210,10 @@ header.style-1 {
         padding: 22px 48px;
         border-radius: 6px;
         display: inline-block;
+        &:hover{
+          background-color: var(--title-color-1);
+          color: var(--white-color);
+        }
       }
     }
   }
@@ -2227,7 +2238,75 @@ header.style-1 {
       width: 100%;
     }
   }
+  swiper-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
 
+  swiper-slide {
+    .service-card{
+      background-color: var(--white-color);
+      padding: 31px 36px 49px;
+      border-radius: 10px;
+      box-shadow: rgba(23, 36, 38, 0.08);
+      .icon{
+        background-color: var(--paragraph-color-1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        padding: 15px;
+        border-radius: 6px;
+        margin-bottom: 60px;
+      &:hover{
+        background-color: var(--primary-color);
+        svg{
+          path{
+            stroke:var(--white-color);
+          }
+        }
+      }
+      }
+      .service-content{
+        h2{
+          font-family:var(--font-unbounded-sans);
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 36px;
+          color: var(--title-color-1);
+          margin: 0;
+          padding-bottom: 12px;
+        }
+        p{
+          font-family: var(--font-manrope);
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 26px;
+          color: var(--paragraph-color-2);
+          margin: 0;
+          padding-bottom: 20px;
+        }
+        .lern-more-btn{
+        a{
+          font-family: var(--font-unbounded-sans);
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 14px;
+          color: var(--primary-color);
+          margin: 0;
+          svg{
+            margin-left: 4px;
+          }
+        }
+
+        }
+      }
+    }
+  }
+
+ 
 }
 // service-section end
 /*=====================================
@@ -2835,51 +2914,8 @@ header.style-1 {
 
       }
     }
-
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // our-team-section end
 //  video-area-section-start 
 .video-area-section{
@@ -3132,9 +3168,13 @@ header.style-1 {
       font-weight: 500;
       font-size: 14px;
       line-height: 14px;
-      padding: 22px 49px;
+      padding: 22px 32px;
       border-radius: 6px;
       display: inline-block;
+      &:hover{
+        background-color: var(--title-color-1);
+        color: var(--white-color);
+      }
     }
   }
   .testimonial-wrap{
@@ -3431,10 +3471,10 @@ header.style-1 {
       
     }
   }
-  .team-card {
+  .blog-card {
     background-color: var(--white-color);
     border-radius: 0 0 18px 18px;
-    .team-img {
+    .blog-img {
       position: relative;
       border-radius: 18px 18px 0px 0px;
       overflow: hidden;
@@ -3449,6 +3489,7 @@ header.style-1 {
             width: 100%;
           }
         }
+
         &::after {
           position: absolute;
           width: 200%;
@@ -3459,11 +3500,10 @@ header.style-1 {
           transform: translate(-50%, -50%) rotate(-45deg);
           content: "";
           z-index: 1;
-          
         }
       }
     }
-    .team-content {
+    .blog-content {
       padding: 28px;
       .blog-meta {
         margin-bottom: 8px;
@@ -3579,7 +3619,7 @@ header.style-1 {
       }
     }
     &:hover {
-      .team-img {
+      .blog-img {
         .card-img {
           border-radius: 18px 18px 0px 0px;
           img {
@@ -3602,110 +3642,7 @@ header.style-1 {
         }
       }
     }
-    &.style-2 {
-      border-radius: 10px;
-      border: 1px solid rgba(var(--title-color-opc), 0.1);
-
-      .team-img {
-        border-radius: 10px 10px 0 0;
-
-        .card-img {
-          img {
-            border-radius: 10px 10px 0 0;
-          }
-        }
-
-        .date {
-          position: absolute;
-          top: 6px;
-          left: 6px;
-          text-align: center;
-          width: 72px;
-          height: 72px;
-          border-radius: 50%;
-          background: rgba(#0b0c0c, 0.4);
-          backdrop-filter: blur(22.5px);
-          transition: 0.5s;
-          z-index: 9;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          @include sm-down-device() {
-            width: 65px;
-            height: 65px;
-          }
-
-          span {
-            color: var(--white-color);
-            text-align: center;
-            font-family: var(--font-inter);
-            font-size: 11px;
-            font-weight: 500;
-            line-height: 1;
-            letter-spacing: 0.22px;
-
-            display: block;
-
-            strong {
-              font-size: 22px;
-              font-weight: 700;
-              font-family: var(--font-hankenGrotesk);
-              margin-bottom: 5px;
-              display: block;
-
-              @include sm-down-device() {
-                font-size: 20px;
-              }
-            }
-          }
-        }
-      }
-
-      .team-content {
-        padding: 30px 25px;
-
-        @include xl-down-device() {
-          padding: 25px 20px;
-        }
-
-        h4 {
-          a {
-            @include xl-device() {
-              font-size: 23px;
-            }
-
-            @include xl-down-device() {
-              font-size: 22px;
-            }
-
-            @include lg-device() {
-              font-size: 20px;
-            }
-          }
-        }
-      }
-
-      &.two {
-        border: none;
-
-        .team-content {
-          padding: 30px 0 0;
-
-          @include xl-down-device() {
-            padding: 25px 0px 0;
-          }
-        }
-      }
-
-      &:hover {
-        .team-img {
-          .date {
-            background-color: var(--primary-color1);
-          }
-        }
-      }
-    }
+   
   }
 }
 // team-card-section-end
@@ -3823,7 +3760,7 @@ header.style-1 {
           width: 100%;
           height: 58px;
           padding: 10px 10px 10px 20px;
-          margin-bottom: 15px;
+          margin: 0;
           input{
             width: 100%;
             color: var(--white-color);
@@ -3841,7 +3778,7 @@ header.style-1 {
             background-color: var(--primary-color);
             color: var(--white-color);
             margin: 0;
-            padding: 15px 20px;
+            padding: 14px 20px;
             border-radius: 6px;
            }
           }
